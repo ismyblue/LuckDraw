@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>System Set</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
     <!-- Bootstrap styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-   
+  
+
     <!-- Font-Awesome -->
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 
@@ -16,21 +17,23 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css" id="theme-styles">
+  <link rel="stylesheet" href="css/style.css" id="theme-styles">
 
     <!--[if lt IE 9]>      
-        <script src="js/respond.js"></script>
+        <script src="js/vendor/google/html5-3.6-respond-1.1.0.min.js"></script>
     <![endif]-->
     
 </head>
+
 <body>
+
     <header>
         <div class="widewrapper masthead">
             <div class="container">
                 <a href="index.html" id="logo">
                     <h1>Lucky</h1>
                 </a>
-        
+
                 <div id="mobile-nav-toggle" class="pull-right">
                     <a href="#" data-toggle="collapse" data-target=".clean-nav .navbar-collapse">
                         <i class="fa fa-bars"></i>
@@ -40,7 +43,7 @@
                 <nav class="pull-right clean-nav">
                     <div class="collapse navbar-collapse">
                         <ul class="nav nav-pills navbar-nav">
-                          
+
                             <li>
                                 <a href="index.html">Home</a>
                             </li>
@@ -49,33 +52,51 @@
                             </li>
                             <li>
                                 <a href="set.html">SET</a>
-                            </li>                        
+                            </li>
                         </ul>
                     </div>
-                </nav>
+                </nav>        
+
             </div>
         </div>
 
         <div class="widewrapper subheader">
+            <div class="container">
 
+            </div>
         </div>
     </header>
 
     <div class="widewrapper main">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 blog-main" >
-                    <iframe src="lucky/lucky.html" width="100%" height="500px" style="border: none"></iframe>
-                </div>
+                <div class="col-md-6 col-md-offset-3 clean-superblock" id="contact">
+                    <h2>SYSTEM SET</h2>
+                    <form action="#" method="get" accept-charset="utf-8" class="contact-form">
+                        <input type="text" name="name" id="contact-name" placeholder="Name" class="form-control input-lg">
+                        <input type="email" name="email" id="contact-email" placeholder="Email" class="form-control input-lg">
+                        <textarea rows="10" name="message" id="contact-body" placeholder="Your Message" class="form-control input-lg"></textarea>
+                        <div class="buttons clearfix">
+                            <button type="submit" class="btn btn-xlarge btn-clean-one">Submit</button>
+                        </div>                    
+                    </form>
 
-            </div>
+                </div>
+            </div>        
         </div>
     </div>
 
-    
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modernizr.js"></script>
+
+    <script>
+
+        $.getJSON("json/user.json", function(json){
+            alert("JSON Data: " + json.userIdLength);
+        });
+
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "background": {
+    "url": "img/bgc.jpg",
+    "width": "1000px",
+    "height": "600px"
+  },
+  "luckySet":[       //奖项设置
+    {
+      "luckyLevel": "1",      //奖项等级
+      "luckyName": "一等奖",   //奖项名
+      "luckyNumber": 1,        //数量
+      "prizeName": "MacBook",   //奖品名
+      "prizeIco": ""          //奖品图标
+    },{
+      "luckyLevel": "2",
+      "luckyName": "一等奖",
+      "luckyNumber": 2,
+      "prize": "iphone",
+      "prizeIco": ""
+    },{
+      "luckyLevel": "3",
+      "luckyName": "一等奖",
+      "luckyNumber": 3,
+      "prize": "ipad",
+      "prizeIco": ""
+    }
+  ]
+}

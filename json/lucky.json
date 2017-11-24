@@ -1,0 +1,23 @@
+{
+ "result": [      //结果
+   {
+     "luckyLevel": 1,   //奖项等级
+     "luckyMan": [
+       { "id":"112312" } //得奖的userId
+     ]
+   },{
+     "luckyLevel": 2,
+     "luckyMan": [
+       { "id":"412332" },
+       { "id":"512313" }
+     ]
+   },{
+     "luckyLevel": 3,
+     "luckyMan": [
+       { "id":"745645" },
+       { "id":"845454" },
+       { "id":"978996" }
+     ]
+   }
+  ]
+}
