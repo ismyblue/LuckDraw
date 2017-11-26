@@ -72,15 +72,66 @@
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 clean-superblock" id="contact">
                     <h2>SYSTEM SET</h2>
-                    <form action="#" method="get" accept-charset="utf-8" class="contact-form">
-                        <input type="text" name="name" id="contact-name" placeholder="Name" class="form-control input-lg">
-                        <input type="email" name="email" id="contact-email" placeholder="Email" class="form-control input-lg">
-                        <textarea rows="10" name="message" id="contact-body" placeholder="Your Message" class="form-control input-lg"></textarea>
+                    <form action="set.php" method="post" accept-charset="utf-8" class="contact-form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <fieldset>
+                                <legend><h2>背景设置</h2></legend>
+                                <label for="bgImage">背景图片</label>
+                                <input type="file" id="bgImage" name="bgImage">
+                                <label for="bgWidth">背景图片宽度(px)</label>
+                                <input type="text" id="bgWidth" class="form-control" name="bgWidth">
+                                <label for="bgHeight">背景图片高度(px)</label>
+                                <input type="text" id="bgHeight" class="form-control" name="bgHeight">
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <fieldset>
+                                <legend><h2>奖项设置</h2></legend>
+                                <div >
+                                    <table id="tabSet" class="table table-hover" name="tabSet">
+                                        <tr>
+                                            <th class="text-center">奖项名称</th>
+                                            <th class="text-center">可得奖品</th>
+                                            <th class="text-center">奖品数量</th>
+                                            <th class="text-center"><button type="button" id="btnAdd" class="btn btn-success">新增</button></th>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="text-center" value="一等奖"></td>
+                                            <td><input type="text" class="text-center" value="MACBook"></td>
+                                            <td><input type="text" class="text-center" value="1"></td>
+                                            <td><button type="button" class="btn btn-danger">删除</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="text-center" value="二等奖"></td>
+                                            <td><input type="text" class="text-center" value="iphone"></td>
+                                            <td><input type="text" class="text-center" value="2"></td>
+                                            <td><button type="button" class="btn btn-danger">删除</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="text" class="text-center" value="三等奖"></td>
+                                            <td><input type="text" class="text-center" value="ipad"></td>
+                                            <td><input type="text" class="text-center" value="3"></td>
+                                            <td><button type="button" class="btn btn-danger">删除</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="form-group">
+                            <fieldset>
+                                <legend><h2>待抽奖人员</h2></legend>
+                                <label for="idLength">抽奖位数</label>
+                                <input type="text" id="idLength" name="idLength" class="form-control" value="">
+                                <i>输入数字，一行代表一个人</i>
+                                <div >
+                                    <textarea name="userIdArray" class="form-control" style="height:  200px"></textarea>
+                                </div>
+                            </fieldset>
+                        </div>
                         <div class="buttons clearfix">
-                            <button type="submit" class="btn btn-xlarge btn-clean-one">Submit</button>
+                            <button type="submit" class="btn btn-xlarge btn-clean-one" >Submit</button>
                         </div>                    
                     </form>
-
                 </div>
             </div>        
         </div>
@@ -91,11 +142,31 @@
     <script src="js/modernizr.js"></script>
 
     <script>
+        $(document).ready(function(){
 
-        $.getJSON("json/user.json", function(json){
-            alert("JSON Data: " + json.userIdLength);
+            // 表格新增
+            $("#btnAdd").click(function () {
+                $("#tabSet").append('<tr>\n' +
+                    '                                            <td><input type="text" class="text-center" value=""></td>\n' +
+                    '                                            <td><input type="text" class="text-center" value=""></td>\n' +
+                    '                                            <td><input type="text" class="text-center" value=""></td>\n' +
+                    '                                            <td><button type="button" class="btn btn-danger">删除</button></td>\n' +
+                    '                                        </tr>');
+                $(".btn-danger").click(function () {
+                    $(this).parent().parent().remove();
+                });
+            });
+            
+            $(".btn-danger").click(function () {
+                $(this).parent().parent().remove();
+            });
+
+            //提取表格数据
+            $("button[type='submit']").click(function () {
+
+            });
+
         });
-
     </script>
 
 </body>
