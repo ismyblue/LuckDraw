@@ -130,6 +130,7 @@
                         </div>
                         <div class="buttons clearfix">
                             <button type="submit" class="btn btn-xlarge btn-clean-one" >Submit</button>
+
                         </div>                    
                     </form>
                 </div>
@@ -160,11 +161,27 @@
             $(".btn-danger").click(function () {
                 $(this).parent().parent().remove();
             });
-
             //提取表格数据
             $("button[type='submit']").click(function () {
+              //$("#my").click(function () {
+                    //获取表格里面的input
+                    var inputs = $("#tabSet input");
+                    //luckyObj
+                    var luckyArry = new Array();
+                    var j = 0;
+                    for(var i = 0;i < inputs.length;i+=3){
+                        luckyArry[j] = new Array();
+                        luckyArry[j]["luckyName"] = inputs[i].value.toString();
+                        luckyArry[j]["prize"] = inputs[i+1].value.toString();
+                        luckyArry[j]["luckyNumber"] = inputs[i+2].value.toString();
+                        alert(luckyArry[j]["luckyName"]);
+                        alert(luckyArry[j]["luckyNumber"]);
+                        alert(luckyArry[j]["prize"]);
+                        j++;
+                    }
 
-            });
+                });
+
 
         });
     </script>

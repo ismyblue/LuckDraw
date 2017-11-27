@@ -6,23 +6,17 @@
   },
   "luckySet":[       //奖项设置
     {
-      "luckyLevel": "1",      //奖项等级
       "luckyName": "一等奖",   //奖项名
-      "luckyNumber": 1,        //数量
       "prizeName": "MacBook",   //奖品名
-      "prizeIco": ""          //奖品图标
+      "luckyNumber": 1        //数量
     },{
-      "luckyLevel": "2",
-      "luckyName": "一等奖",
-      "luckyNumber": 2,
+      "luckyName": "二等奖",
       "prize": "iphone",
-      "prizeIco": ""
+      "luckyNumber": 2
     },{
-      "luckyLevel": "3",
-      "luckyName": "一等奖",
-      "luckyNumber": 3,
+      "luckyName": "三等奖",
       "prize": "ipad",
-      "prizeIco": ""
+      "luckyNumber": 3
     }
   ]
 }
