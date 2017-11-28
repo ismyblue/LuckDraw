@@ -88,7 +88,7 @@
                             <fieldset>
                                 <legend><h2>奖项设置</h2></legend>
                                 <div >
-                                    <table id="tabSet" class="table table-hover" name="tabSet">
+                                    <table class="table table-hover" id="tabSet">
                                         <tr>
                                             <th class="text-center">奖项名称</th>
                                             <th class="text-center">可得奖品</th>
@@ -114,6 +114,7 @@
                                             <td><button type="button" class="btn btn-danger">删除</button></td>
                                         </tr>
                                     </table>
+                                    <input type="hidden" id="hidden" name="tabSet" style="" value="123123123">
                                 </div>
                             </fieldset>
                         </div>
@@ -161,27 +162,31 @@
             $(".btn-danger").click(function () {
                 $(this).parent().parent().remove();
             });
+
+
+
             //提取表格数据
             $("button[type='submit']").click(function () {
-              //$("#my").click(function () {
-                    //获取表格里面的input
-                    var inputs = $("#tabSet input");
-                    //luckyObj
-                    var luckyArry = new Array();
-                    var j = 0;
-                    for(var i = 0;i < inputs.length;i+=3){
-                        luckyArry[j] = new Array();
-                        luckyArry[j]["luckyName"] = inputs[i].value.toString();
-                        luckyArry[j]["prize"] = inputs[i+1].value.toString();
-                        luckyArry[j]["luckyNumber"] = inputs[i+2].value.toString();
-                        alert(luckyArry[j]["luckyName"]);
-                        alert(luckyArry[j]["luckyNumber"]);
-                        alert(luckyArry[j]["prize"]);
-                        j++;
-                    }
-
-                });
-
+                //获取表格里面的input
+                var inputs = $("#tabSet input");
+                //luckyObj
+                var tabSet = "[";
+                var j = 0;
+                for(var i = 0;i < inputs.length;i+=3){
+                    tabSet += "{\"luckyName\":" ;
+                    tabSet += "\"" + inputs[i].value.toString() + "\",";
+                    tabSet += "\"prize\":" ;
+                    tabSet += "\"" + inputs[i+1].value.toString() + "\",";
+                    tabSet += "\"luckyNumber\":" ;
+                    tabSet += "\"" + inputs[i+2].value.toString() + "\"}";
+                    if(i != inputs.length - 3)
+                        tabSet += ",";
+                    j++;
+                }
+                tabSet += "]";
+                inputs.attr("disabled","true");
+                $("#hidden").val(tabSet);
+            });
 
         });
     </script>

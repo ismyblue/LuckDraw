@@ -26,21 +26,24 @@ tabSet*/
                 $bgImageUrl = "img/" . $_FILES["bgImage"]["name"];
             }
         }
+
         $bgWidth = test_input($_POST["bgWidth"]);
         $bgHeight = test_input($_POST["bgHeight"]);
-       // $tabSet = test_input($_POST["tabSet"]);
+        $tabSet = test_input($_POST["tabSet"]);
         $idLength = test_input($_POST["idLength"]);
         $userIdString = test_input($_POST["userIdArray"]);
 
         $userIdArray = explode("\r\n",$userIdString);
+        echo $bgImageUrl."<br>".$bgWidth."<br>".$bgHeight."<br>".$tabSet."<br>".$idLength."<br>".$userIdArray."<br>";
+        var_dump($userIdArray);
 
-        echo $bgImageUrl."<br>".$bgWidth."<br>".$bgHeight."<br>".$idLength."<br>";
+        
+
 
     }
     else{
         echo "<h1>提交出错</h1>";
     }
-
 
 
 
