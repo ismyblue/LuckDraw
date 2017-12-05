@@ -42,13 +42,13 @@
                         <ul class="nav nav-pills navbar-nav">
                           
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="index.php">Home</a>
                             </li>
                             <li>
-                                <a href="info.html">INFO</a>
+                                <a href="info.php">INFO</a>
                             </li>
                             <li>
-                                <a href="set.html">SET</a>
+                                <a href="set.php">SET</a>
                             </li>                        
                         </ul>
                     </div>
@@ -63,15 +63,10 @@
 
     <div class="widewrapper main">
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <div class="col-md-12 blog-main" >
-                    <iframe src="lucky/lucky.html" width="100%" height="500px" style="border: none"></iframe>
+                    <iframe src="lucky.html" width="100%" height="500px" style="border: none"></iframe>
                 </div>
-				<form action="http://localhost/HelloWorld/upload_file.php" method="post" enctype="multipart/form-data">
-
-				</form>
-				
-
             </div>
         </div>
     </div>
@@ -80,6 +75,23 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modernizr.js"></script>
+    <script>
 
+        var imgurl = "";
+        var width = "";
+        var height = "";
+        $.getJSON("json/conf.json",function (data) {
+            $.each(data,function(index, item){
+                if(index == "background"){
+                    imgurl = item.url;
+                    width = item.width;
+                    height = item.height;
+                    var  s = "url("+imgurl+") " + width+"%"+ " " + height+"%;";
+                    $("div.row").attr("style","background: "+  s);
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>

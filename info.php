@@ -27,7 +27,7 @@
 <header>
     <div class="widewrapper masthead">
         <div class="container">
-            <a href="index.html" id="logo">
+            <a href="index.php" id="logo">
                 <h1>Lucky</h1>
             </a>
 
@@ -41,13 +41,13 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav nav-pills navbar-nav">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                         </li>
                         <li>
-                            <a href="info.html">INFO</a>
+                            <a href="info.php">INFO</a>
                         </li>
                         <li>
-                            <a href="set.html">SET</a>
+                            <a href="set.php">SET</a>
                         </li>
                     </ul>
                 </div>
