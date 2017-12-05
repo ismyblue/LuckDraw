@@ -34,11 +34,40 @@ tabSet*/
         $userIdString = test_input($_POST["userIdArray"]);
 
         $userIdArray = explode("\r\n",$userIdString);
-        echo $bgImageUrl."<br>".$bgWidth."<br>".$bgHeight."<br>".$tabSet."<br>".$idLength."<br>".$userIdArray."<br>";
-        var_dump($userIdArray);
+        echo $bgImageUrl."<br>".$bgWidth."<br>".$bgHeight."<br>".$tabSet."<br>".$idLength."<br>".$userIdString."<br>";
 
-        
 
+        //写入conf.json
+        $confString = file_get_contents("json/conf.json");
+        $confArray = json_decode($confString,true);
+        if($bgImageUrl !== "")
+            $confArray["background"]["url"] = $bgImageUrl;
+        if($bgWidth !== "")
+            $confArray["background"]["Width"] = $bgWidth;
+        if($bgHeight !== "")
+            $confArray["background"]["Height"] = $bgHeight;
+        //$tabSet to array
+        $tabSet = json_decode($tabSet,true);
+        echo "<hr>";
+        var_dump($tabSet);
+        var_dump($confArray);
+        for($i = 0;$i < count($tabSet["luckySet"]); $i++){
+            $confArray["luckySet"][$i]["luckyName"] = $tabSet["luckySet"][$i]["luckyName"];
+            $confArray["luckySet"][$i]["prizeName"] = $tabSet["luckySet"][$i]["prizeName"];
+            $confArray["luckySet"][$i]["luckyNumber"] = $tabSet["luckySet"][$i]["luckyNumber"];
+        }
+        $confString = json_encode($confArray);
+        file_put_contents("json/conf.json",$confString);
+
+        //写入user.json
+        $userString = file_get_contents("json/user.json");
+        $userArray = json_decode($userString,true);
+        $userArray["userIdLength"] = $idLength;
+        for($i = 0;$i < count($userIdArray); $i++){
+            $userArray["id"][$i] = $userIdArray[$i];
+        }
+        $userString = json_encode($userArray);
+        file_put_contents("json/user.json",$userString);
 
     }
     else{
@@ -57,7 +86,7 @@ tabSet*/
     function test_input($data){
         $data = trim($data);
         $data = stripcslashes($data);
-        $data = htmlspecialchars($data);
+        //$data = htmlspecialchars($data);
         return $data;
     }
 

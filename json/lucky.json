@@ -1,9 +1,9 @@
 {
- "result": [      //结果
+ "result": [
    {
-     "luckyLevel": 1,   //奖项等级
+     "luckyLevel": 1,
      "luckyMan": [
-       { "id":"112312" } //得奖的userId
+       { "id":"112312" }
      ]
    },{
      "luckyLevel": 2,

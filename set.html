@@ -131,7 +131,6 @@
                         </div>
                         <div class="buttons clearfix">
                             <button type="submit" class="btn btn-xlarge btn-clean-one" >Submit</button>
-
                         </div>                    
                     </form>
                 </div>
@@ -145,6 +144,11 @@
 
     <script>
         $(document).ready(function(){
+
+            //数据更新
+            <?php
+
+                ?>
 
             // 表格新增
             $("#btnAdd").click(function () {
@@ -170,12 +174,12 @@
                 //获取表格里面的input
                 var inputs = $("#tabSet input");
                 //luckyObj
-                var tabSet = "[";
+                var tabSet = "{\"luckySet\":[";
                 var j = 0;
                 for(var i = 0;i < inputs.length;i+=3){
                     tabSet += "{\"luckyName\":" ;
                     tabSet += "\"" + inputs[i].value.toString() + "\",";
-                    tabSet += "\"prize\":" ;
+                    tabSet += "\"prizeName\":" ;
                     tabSet += "\"" + inputs[i+1].value.toString() + "\",";
                     tabSet += "\"luckyNumber\":" ;
                     tabSet += "\"" + inputs[i+2].value.toString() + "\"}";
@@ -183,7 +187,7 @@
                         tabSet += ",";
                     j++;
                 }
-                tabSet += "]";
+                tabSet += "]}";
                 inputs.attr("disabled","true");
                 $("#hidden").val(tabSet);
             });
