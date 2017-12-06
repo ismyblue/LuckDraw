@@ -39,8 +39,10 @@ tabSet*/
         //写入conf.json
         $confString = file_get_contents("json/conf.json");
         $confArray = json_decode($confString,true);
-        if(isset($bgImageUrl))
+        if($bgImageUrl != "")
             $confArray["background"]["url"] = $bgImageUrl;
+        var_dump($confArray["background"]["url"]);
+
         $confArray["background"]["width"] = $bgWidth;
         $confArray["background"]["height"] = $bgHeight;
         //$tabSet to array
@@ -61,6 +63,7 @@ tabSet*/
         $userString = file_get_contents("json/user.json");
         $userArray = json_decode($userString,true);
         $userArray["userIdLength"] = $idLength;
+        $userArray["id"] = array();
         for($i = 0;$i < count($userIdArray); $i++){
             $userArray["id"][$i] = $userIdArray[$i];
         }

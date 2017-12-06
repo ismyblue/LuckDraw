@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/info.php" line="66" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="44efa886-081b-4ea5-8518-687d82cdf6be" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/andes.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/avatar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bgc.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/single-post.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/info.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lucky/js/jquery-1.11.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/set.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/clearLuckyJson.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lucky.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info.php" afterPath="$PROJECT_DIR$/info.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/conf.json" afterPath="$PROJECT_DIR$/json/conf.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/lucky.json" afterPath="$PROJECT_DIR$/json/lucky.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/user.json" afterPath="$PROJECT_DIR$/json/user.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/set.php" afterPath="$PROJECT_DIR$/set.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lucky/img/num.png" afterPath="$PROJECT_DIR$/img/num.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lucky/lucky.html" afterPath="$PROJECT_DIR$/lucky.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settojson.php" afterPath="$PROJECT_DIR$/settojson.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,8 +32,8 @@
       <file leaf-file-name="set.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/set.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+            <state relative-caret-position="232">
+              <caret line="158" column="50" lean-forward="false" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#fieldset#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -43,13 +41,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="68" column="22" lean-forward="false" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+            <state relative-caret-position="126">
+              <caret line="176" column="43" lean-forward="true" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
               <folding>
-                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +59,20 @@
       <file leaf-file-name="info.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/info.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+            <state relative-caret-position="37">
+              <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clearLuckyJson.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clearLuckyJson.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -68,8 +81,8 @@
       <file leaf-file-name="settojson.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settojson.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1078">
-              <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+            <state relative-caret-position="233">
+              <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -79,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/json/user.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+              <caret line="0" column="147" lean-forward="true" selection-start-line="0" selection-start-column="147" selection-end-line="0" selection-end-column="147" />
               <folding />
             </state>
           </provider>
@@ -89,17 +102,7 @@
         <entry file="file://$PROJECT_DIR$/json/conf.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="23" lean-forward="true" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+              <caret line="0" column="69" lean-forward="false" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -108,18 +111,8 @@
       <file leaf-file-name="lucky.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/json/lucky.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lucky.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lucky.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+            <state relative-caret-position="207">
+              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -143,9 +136,11 @@
       <find>aler</find>
       <find>html</find>
       <find>.html</find>
-      <find>var</find>
-      <find>px</find>
+      <find>num_box</find>
       <find>jq</find>
+      <find>px</find>
+      <find>var</find>
+      <find>user.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,16 +150,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/about.html" />
-        <option value="$PROJECT_DIR$/json/lucky.json" />
         <option value="$PROJECT_DIR$/set.html" />
-        <option value="$PROJECT_DIR$/json/user.json" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/info.html" />
-        <option value="$PROJECT_DIR$/settojson.php" />
         <option value="$PROJECT_DIR$/set.php" />
         <option value="$PROJECT_DIR$/json/conf.json" />
         <option value="$PROJECT_DIR$/lucky/lucky.html" />
         <option value="$PROJECT_DIR$/lucky.html" />
+        <option value="$PROJECT_DIR$/info.php" />
+        <option value="$PROJECT_DIR$/clearLuckyJson.php" />
+        <option value="$PROJECT_DIR$/json/lucky.json" />
+        <option value="$PROJECT_DIR$/json/user.json" />
+        <option value="$PROJECT_DIR$/settojson.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -211,6 +208,10 @@
               <item name="LuckDraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="LuckDraw" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="LuckDraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -222,7 +223,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="D:/WAMP/php-7.1.11-Win32-VC14-x64/php.exe" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -275,12 +276,12 @@
       <workItem from="1511750366888" duration="4172000" />
       <workItem from="1511759933975" duration="2501000" />
       <workItem from="1511880639301" duration="3594000" />
-      <workItem from="1512490761562" duration="15456000" />
+      <workItem from="1512490761562" duration="32098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61669000" />
+    <option name="totallyTimeSpent" value="78311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -319,14 +320,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/json/conf.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/lucky.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -601,20 +594,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/info.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/user.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/img/andes.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/img/1.jpg">
@@ -622,60 +604,84 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settojson.php">
+    <entry file="file://$PROJECT_DIR$/info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1078">
-          <caret line="69" column="35" lean-forward="false" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="37">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/andes.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/conf.json">
+    <entry file="file://$PROJECT_DIR$/lucky.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" lean-forward="false" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+        <state relative-caret-position="1300">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/set.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="85" column="30" lean-forward="true" selection-start-line="85" selection-start-column="30" selection-end-line="85" selection-end-column="30" />
+        <state relative-caret-position="232">
+          <caret line="158" column="50" lean-forward="false" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#0;n#fieldset#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="68" column="22" lean-forward="false" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/json/lucky.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="207">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lucky.html">
+    <entry file="file://$PROJECT_DIR$/json/conf.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="89" column="31" lean-forward="true" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+        <state relative-caret-position="0">
+          <caret line="0" column="69" lean-forward="false" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/user.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="147" lean-forward="true" selection-start-line="0" selection-start-column="147" selection-end-line="0" selection-end-column="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settojson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clearLuckyJson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="176" column="43" lean-forward="true" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#nav#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
