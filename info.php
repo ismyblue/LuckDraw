@@ -69,8 +69,8 @@
                     </table>
             </div>
         </div>
-        <form action="clearLuckyJson.php" method="post">
-            <input type="hidden" name="clear" value="clear">
+        <form action="updateLuckJson.php" method="post">
+            <input type="hidden" name="update" value="clear">
             <button class="btn btn-danger center-block" style="margin-bottom: 100px">清除所有信息Clear all information</button>
         </form>
     </div>

@@ -39,10 +39,11 @@ tabSet*/
         //写入conf.json
         $confString = file_get_contents("json/conf.json");
         $confArray = json_decode($confString,true);
+        //var_dump($confArray["background"]["url"]);
+
         if($bgImageUrl != "")
             $confArray["background"]["url"] = $bgImageUrl;
-        var_dump($confArray["background"]["url"]);
-
+        //var_dump($confArray["background"]["url"]);
         $confArray["background"]["width"] = $bgWidth;
         $confArray["background"]["height"] = $bgHeight;
         //$tabSet to array
@@ -59,18 +60,36 @@ tabSet*/
 
 
 
+
         //写入user.json
         $userString = file_get_contents("json/user.json");
         $userArray = json_decode($userString,true);
         $userArray["userIdLength"] = $idLength;
-        $userArray["id"] = array();
         for($i = 0;$i < count($userIdArray); $i++){
             $userArray["id"][$i] = $userIdArray[$i];
         }
         $userString = json_encode($userArray);
         file_put_contents("json/user.json",$userString);
 
-        header("Location: index.php");
+        //写入lucky.json
+        //$luckyString = file_get_contents("json/lucky.json");
+        $luckyArray = array();
+        $luckyArray["result"] = array();
+        //var_dump($luckyArray["result"]);
+        $len = count($confArray["luckySet"]);
+        for($i  = 0 ;$i < $len;$i++){
+            $luckyArray["result"][$i]  = array();
+            $luckyArray["result"][$i]["luckyName"] = $confArray["luckySet"][$i]["luckyName"];
+            $luckyArray["result"][$i]["id"] = array();
+        }
+        $luckyString = json_encode($luckyArray);
+        file_put_contents("json/lucky.json",$luckyString);
+
+
+        $url="index.php";
+        echo "<script LANGUAGE='Javascript'>";
+        echo "location.href='$url'";
+        echo "</script>";
     }
     else{
         echo "<h1>提交出错</h1>";

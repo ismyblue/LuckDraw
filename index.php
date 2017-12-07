@@ -86,9 +86,8 @@
         </div>
 
         <div class="widewrapper subheader">
-            <select class="form-control input-lg" name="luckyName">
-                <option>afd</option>
-                <option>afd</option>
+            <select class="form-control input-lg" name="luckyName" id="select">
+
             </select>
         </div>
     </header>
@@ -98,7 +97,7 @@
             <div class="row" >
 
                 <h1 class="response " style="color: red" >
-                    一等奖还剩2个！
+
                 </h1>
                 <div class="col-md-12 blog-main" >
                     <div class="main">
@@ -106,6 +105,12 @@
                             <!--抽奖盒子-->
                         </div>
                         <div class="num_btn">开始摇奖</div>
+                        <form action="updateLuckJson.php" method="post">
+                            <input type="hidden" name="update" value="add">
+                            <input type="hidden" name="checkIndex" value="">
+                            <input type="hidden" name="number" value="">
+                            <input type="submit" class="btn btn-success form-control" id="btn-save" style="float: right;display: none " value="保存此次结果">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -118,11 +123,28 @@
     <script src="js/modernizr.js"></script>
     <script>
 
-        //conf.json设置背景
+        //得到lucky.json
+        var luckyId = new Array();
+        $.getJSON("json/lucky.json",function (data) {
+            luckyId = data;
+            //alert(luckyId["result"][0]["id"][0]);
+            $.each(data, function (index, item) {
+/*                luckyId["result"][index] = new Array();
+                luckyId["result"][index]["luckName"] = item.luckyName;
+                luckyId["result"][index]["id"] = new Array();
+                for (var i = 0; i < item.id.length; i++) {
+                    luckyId["result"][index]["id"][i] = item.id[i];
+                }*/
+            });
+        });
+
+        //conf.json设置背景和select
         var imgurl = "";
         var width = "";
         var height = "";
         var luckySet = new Array();
+        var checkIndex = "";
+        var canLuckyNum = 0;
         $.getJSON("json/conf.json",function (data) {
             $.each(data,function(index, item){
                 if(index == "background"){
@@ -139,19 +161,29 @@
                         luckySet[i]["prizeName"] = item[i].prizeName;
                         luckySet[i]["luckyNumber"] = item[i].luckyNumber;
                     }
-                    var select = $("select");
+                    //添加option
                     for(var i = 0 ;i < item.length;i++){
-                        var option = document.createElement("option");
-                        option.name = luckySet[i]["luckyName"];
-                        option.innerHTML = luckySet[i]["luckyName"];
-                        select.appendChild(option);
-                        alert("fasdf");
+                        $("#select").append("<option value='"+luckySet[i]["luckyName"]+"'>"+luckySet[i]["luckyName"]+"</option>");
                     }
+
+                    $("#select").change(function () {
+                        checkIndex=this.selectedIndex; //获取Select选择的索引值
+                        $("h1.response").html(luckySet[checkIndex]["luckyName"] + luckySet[checkIndex]["prizeName"] + "还剩" + (luckySet[checkIndex]["luckyNumber"] - luckyId["result"][checkIndex]["id"].length) +"个!");
+                        canLuckyNum = luckySet[checkIndex]["luckyNumber"] - luckyId["result"][checkIndex]["id"].length;
+                        $("#btn-save").hide();
+                    });
+
+                    //初始化显示最低等级的奖项
+                    checkIndex = $("#select option").length - 1;
+                    selectName = luckySet[checkIndex]["luckyName"];
+                    canLuckyNum = luckySet[checkIndex]["luckyNumber"] - luckyId["result"][checkIndex]["id"].length;
+                    $("#select").val(luckySet[checkIndex]["luckyName"]);
+                    $("h1.response").html(luckySet[checkIndex]["luckyName"] + luckySet[checkIndex]["prizeName"] + "还剩" + (luckySet[checkIndex]["luckyNumber"] - luckyId["result"][checkIndex]["id"].length) +"个!");
                 }
             });
         });
 
-        //获得抽奖人员id信息
+        //获得抽奖人员id信息user.json
         var user = new Array();
         $.getJSON("json/user.json",function (data) {
             $.each(data,function (index, item) {
@@ -172,28 +204,44 @@
             var select = $("[name='luckyName']");
         });
 
+        //选择抽奖等级
+
+
         //点击抽奖
         var flag=false;
+        var number;//最后答案
         $('.num_btn').on('click',function(){
             if(!$('.num_box>div').is(':animated')){
-                if(flag==true){
+                if(flag==true || canLuckyNum <= 0){
                     return false;  //放置多次点击
                 }
                 flag=true;
                 var imgH=265;
-                var number=getRandomNumber()+'';
+                number=getRandomNumber()+'';
                 $('.num_box>div').css('background-position-y',0);  //将所有背景图重置为0
                 var numArr=number.split('');
                 $('.num_box>div').each(function(index){
                     var This=$(this);  //This必须写在外面，不能卸载setTimeout里面
                     setTimeout(function(){
                         This.animate({'background-position-y':imgH*50-imgH*numArr[index]},6000,'swing');
+                        //抽奖完毕
                         if(parseInt(index)== parseInt(user["userIdLength"])-1){
                             flag=false;
+                            //保存抽奖结果
+                            setTimeout(function () {
+                                $("#btn-save").show();
+                            },6000);
                         }
                     },1000*index);
                 });
             }
+        });
+
+        //保存信息
+        $("#btn-save").click(function () {
+            luckyId["result"][checkIndex]["id"].push(number);
+            $("[name='checkIndex']").val(checkIndex.toString());
+            $("[name='number']").val(number);
         });
 
         //得到抽中的id
