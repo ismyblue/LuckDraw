@@ -65,6 +65,7 @@ tabSet*/
         $userString = file_get_contents("json/user.json");
         $userArray = json_decode($userString,true);
         $userArray["userIdLength"] = $idLength;
+        $userArray["id"] = array();
         for($i = 0;$i < count($userIdArray); $i++){
             $userArray["id"][$i] = $userIdArray[$i];
         }

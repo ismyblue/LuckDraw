@@ -37,7 +37,7 @@
             width: 180px;
             height: 265px;
             margin: 0px 10px ;
-            background: url("img/num.png") top center repeat-y #ccc;  /*repeat-y来实现轮播*/
+            background: url("img/num.png") top center repeat-y  #c0c0c0;  /*repeat-y来实现轮播*/
         }
         .num_btn{
             width: 200px;
@@ -105,6 +105,10 @@
                             <!--抽奖盒子-->
                         </div>
                         <div class="num_btn">开始摇奖</div>
+                        <audio controls="controls" autoplay="autoplay" loop="loop" style="display: none">
+                                <source src="img/GoTime.mp3" type="audio/mpeg" />
+                                Your browser does not support the audio element.
+                        </audio>
                         <form action="updateLuckJson.php" method="post">
                             <input type="hidden" name="update" value="add">
                             <input type="hidden" name="checkIndex" value="">
@@ -127,15 +131,6 @@
         var luckyId = new Array();
         $.getJSON("json/lucky.json",function (data) {
             luckyId = data;
-            //alert(luckyId["result"][0]["id"][0]);
-            $.each(data, function (index, item) {
-/*                luckyId["result"][index] = new Array();
-                luckyId["result"][index]["luckName"] = item.luckyName;
-                luckyId["result"][index]["id"] = new Array();
-                for (var i = 0; i < item.id.length; i++) {
-                    luckyId["result"][index]["id"][i] = item.id[i];
-                }*/
-            });
         });
 
         //conf.json设置背景和select
